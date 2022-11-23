@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#banner-section {
+  font-family: "Red Rose", cursive;
+}
+
+#experience-section,
+#portfolio-section {
+  font-family: "Montserrat", sans-serif;
+}
