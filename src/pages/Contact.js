@@ -3,7 +3,7 @@ import React from "react";
 export default function Contact() {
   const card =
     "bg-gray-900 px-5 py-10 rounded lg:text-xl hover:cursor-pointer lg:hover:-mt-2 transition-all duration-300";
-  const formStyle = "bg-black p-2 rounded";
+  const formStyle = "bg-black p-2 rounded-lg";
   return (
     <section
       id="contact-section"
@@ -21,7 +21,7 @@ export default function Contact() {
           professional experiences.
         </p>
         <hr className="w-1/3 mx-auto border border-green-600 my-10" />
-        <div className="grid lg:grid-cols-3 gap-5">
+        <div className="grid lg:grid-cols-3 gap-5 my-10">
           <div>
             <div className={card}>
               <i className="fa fa-map mt-3 mb-4 text-green-600 text-4xl" />
@@ -45,7 +45,7 @@ export default function Contact() {
           </a>
         </div>
         <form action="" className="mt-5 bg-gray-900">
-          <div className="grid grid-cols-2 p-5 gap-2">
+          <div className="grid grid-cols-2 p-10 gap-2">
             <input
               type="text"
               required=""
@@ -67,12 +67,17 @@ export default function Contact() {
             <textarea
               name="message"
               required
+              rows={10}
               placeholder="Message"
               defaultValue={""}
-              className={formStyle}
+              className={`${formStyle} col-span-2`}
             />
           </div>
-          <input className="submit bg-green-700 py-2 px-4 " type="submit" />
+          <input
+            className="submit bg-green-700 py-2 px-4 w-full hover:bg-green-600 hover:cursor-pointer"
+            type="submit"
+            value={"Send"}
+          />
         </form>
       </div>
     </section>

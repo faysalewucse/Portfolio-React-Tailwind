@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Portfolio() {
   const [category, setCategory] = useState("all");
@@ -94,7 +95,10 @@ export default function Portfolio() {
           })}
         </div>
 
-        <div className="grid grid-cols-1 min-[1600px]:grid-cols-3 md:grid-cols-2 p-5 gap-5 my-10">
+        <motion.div
+          layout
+          className="grid grid-cols-1 min-[1600px]:grid-cols-3 md:grid-cols-2 p-5 gap-5 my-10"
+        >
           {projects
             .filter((project) => {
               if (category !== "all") {
@@ -104,38 +108,44 @@ export default function Portfolio() {
             })
             .map((project, index) => {
               return (
-                <div
-                  key={index}
-                  className="group/item rounded-lg bg-gray-800 transform hover:bg-gray-700 transition duration-500 lg:hover:scale-105 flex flex-col justify-between"
-                >
-                  <h1 className="font-bold tracking-wider my-2">
-                    {project.name}
-                  </h1>
-                  <img
-                    className="relative rounded-b object-cover h-60 w-full"
-                    src={`./images/portfolio/${project.image}`}
-                    alt={project.name}
-                  />
-                  <div className="lg:invisible group-hover/item:visible absolute bottom-1 left-1 transform flex gap-5 mt-10 text-sm w-full">
-                    <a
-                      href={project.live_demo}
-                      target="blank"
-                      className="bg-green-500 px-5 py-2 hover:bg-green-600 rounded-md"
-                    >
-                      Live Demo
-                    </a>
-                    <a
-                      href={project.source_code}
-                      target="blank"
-                      className="bg-gray-600 px-5 py-2 hover:bg-gray-700 rounded-md"
-                    >
-                      Github
-                    </a>
-                  </div>
-                </div>
+                <AnimatePresence>
+                  <motion.div
+                    layout
+                    initial={{ transform: "scale(0)" }}
+                    animate={{ transform: "scale(1)" }}
+                    exit={{ transform: "scale(1)" }}
+                    key={index}
+                    className="group/item rounded-lg bg-gray-800 transform hover:bg-gray-700 transition duration-500 lg:hover:scale-105 flex flex-col justify-between"
+                  >
+                    <h1 className="font-bold tracking-wider my-2">
+                      {project.name}
+                    </h1>
+                    <img
+                      className="relative rounded-b object-cover h-60 w-full"
+                      src={`./images/portfolio/${project.image}`}
+                      alt={project.name}
+                    />
+                    <div className="lg:invisible group-hover/item:visible absolute bottom-1 left-1 transform flex gap-5 mt-10 text-sm w-full">
+                      <a
+                        href={project.live_demo}
+                        target="blank"
+                        className="bg-green-500 px-5 py-2 hover:bg-green-600 rounded-md"
+                      >
+                        Live Demo
+                      </a>
+                      <a
+                        href={project.source_code}
+                        target="blank"
+                        className="bg-gray-600 px-5 py-2 hover:bg-gray-700 rounded-md"
+                      >
+                        Github
+                      </a>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
               );
             })}
-        </div>
+        </motion.div>
         <p className="border border-green-500 p-2 inline-block">
           Load More Projects...
         </p>

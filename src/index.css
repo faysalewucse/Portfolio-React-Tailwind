@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-#banner-section {
+#banner-section,
+#footer-section {
   font-family: "Red Rose", cursive;
 }
 
