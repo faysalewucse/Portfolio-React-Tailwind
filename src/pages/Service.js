@@ -24,7 +24,7 @@ export const Service = () => {
   return (
     <section
       id="services-section"
-      className="lg:px-72 px-6 bg-gray-800 py-[3%] text-white text-center"
+      className="min-[1600px]:px-72 md:px-24 px-6 bg-gray-800 py-[3%] text-white text-center"
     >
       <div className="max-w-7xl mx-auto">
         <h6 className="border border-green-500 inline-block py-2 px-8 font-bold">
@@ -44,9 +44,12 @@ export const Service = () => {
         <br />
         <i className="fa fa-arrow-down mb-5" />
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 text-left gap-5">
-          {services.map((service) => {
+          {services.map((service, index) => {
             return (
-              <div className="group/item relative border border-green-600 px-5 py-10 hover:bg-gray-900 hover:cursor-pointer">
+              <div
+                key={index}
+                className="group/item relative border border-green-600 px-5 py-10 hover:bg-gray-900 hover:cursor-pointer"
+              >
                 <i className={`fa-brands fa-${service.icon} text-5xl`}></i>
                 <h4 className="mt-4 text-3xl font-bold my-2">{service.name}</h4>
                 <p className="lead">{service.description}</p>

@@ -48,11 +48,11 @@ export default function HeroSections() {
         />
       </div>
       <SocialMedias />
-      <div className="animate-ping border-4 border-green-500 rounded-full h-5 absolute top-60 right-52 w-5"></div>
-      <div className="animate-ping border-4 border-green-500 rounded-full h-5 absolute top-50 left-48 w-5"></div>
-      <div className="animate-ping border-4 border-green-500 rounded-full h-5 absolute top-20 left-1/3 w-5"></div>
-      <div className="animate-ping border-4 border-green-500 rounded-full h-5 absolute top-80 left-2/5 w-5"></div>
-      <div className="animate-ping border-4 border-green-500 rounded-full h-5 absolute top-24 right-80 w-5"></div>
+      <div className="lg:visible invisible animate-ping border-4 border-green-500 rounded-full h-5 absolute top-60 right-52 w-5"></div>
+      <div className="lg:visible invisible animate-ping border-4 border-green-500 rounded-full h-5 absolute top-50 left-48 w-5"></div>
+      <div className="lg:visible invisible animate-ping border-4 border-green-500 rounded-full h-5 absolute top-20 left-1/3 w-5"></div>
+      <div className="lg:visible invisible animate-ping border-4 border-green-500 rounded-full h-5 absolute top-80 left-2/5 w-5"></div>
+      <div className="lg:visible invisible animate-ping border-4 border-green-500 rounded-full h-5 absolute top-24 right-80 w-5"></div>
       <img
         src="images/wave2.png"
         alt="wave"

@@ -3,7 +3,6 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function Portfolio() {
   const [category, setCategory] = useState("all");
-
   const categories = [
     {
       name: "All",
@@ -20,24 +19,25 @@ export default function Portfolio() {
   ];
   const projects = [
     {
-      name: "Online Food Delivery System",
-      image: "FoodsBd.jpg",
-      live_demo: "https://foodsbd.netlify.app/",
-      source_code: "",
-      type: "web",
-    },
-    {
       name: "Quran Learning System",
       image: "LLQ.jpg",
-      live_demo: "https://dreamy-creponne-8d2692.netlify.app",
-      source_code: "",
+      live_demo: "https://letslearnquran.netlify.app",
+      source_code: "https://github.com/faysalewucse/Lets-Learn-Quran",
       type: "web",
     },
     {
       name: "Perfume Eccommerce Shop",
       image: "Assuzud.jpg",
-      live_demo: "",
-      source_code: "",
+      live_demo: "https://assuzudperfumance.netlify.app/",
+      source_code: "https://github.com/faysalewucse/As-Suzud-Perfume",
+      type: "web",
+    },
+    {
+      name: "Online Food Delivery System",
+      image: "FoodsBd.jpg",
+      live_demo: "https://foodsbd.netlify.app/",
+      source_code:
+        "https://github.com/faysalewucse/Online-Food-Ordering-System",
       type: "web",
     },
     {
@@ -57,18 +57,10 @@ export default function Portfolio() {
     },
   ];
 
-  console.log(
-    projects.filter((project) => {
-      if (category !== "all") {
-        if (category === project.type) return project;
-      }
-      return project;
-    })
-  );
   return (
     <section
       id="portfolio-section"
-      className="py-5 bg-gray-900 text-white text-center px-2 lg:px-72"
+      className="py-5 bg-gray-900 text-white text-center px-2 min-[1600px]:px-72 md:px-24"
     >
       <div className="max-w-7xl mx-auto">
         <h6 className="border border-green-500 py-2 px-5 inline-block">
@@ -108,13 +100,12 @@ export default function Portfolio() {
             })
             .map((project, index) => {
               return (
-                <AnimatePresence>
+                <AnimatePresence key={index}>
                   <motion.div
                     layout
                     initial={{ transform: "scale(0)" }}
                     animate={{ transform: "scale(1)" }}
                     exit={{ transform: "scale(1)" }}
-                    key={index}
                     className="group/item rounded-lg bg-gray-800 transform hover:bg-gray-700 transition duration-500 lg:hover:scale-105 flex flex-col justify-between"
                   >
                     <h1 className="font-bold tracking-wider my-2">

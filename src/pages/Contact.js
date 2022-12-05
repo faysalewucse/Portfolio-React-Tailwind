@@ -3,11 +3,11 @@ import React from "react";
 export default function Contact() {
   const card =
     "bg-gray-900 px-5 py-10 rounded lg:text-xl hover:cursor-pointer lg:hover:-mt-2 transition-all duration-300";
-  const formStyle = "bg-black p-2 rounded-lg";
+  const formStyle = "bg-gray-800 p-2 rounded";
   return (
     <section
       id="contact-section"
-      className="bg-gray-800 text-white lg:px-72 px-6 py-12 text-center"
+      className="bg-gray-800 text-white min-[1600px]:px-72 md:px-24 px-6 py-12 text-center"
     >
       <div className="max-w-7xl mx-auto">
         <h5 className="after:content-[''] after:bg-green-600 after:inline-block after:h-[3px] after:relative after:align-middle after:ml-5 after:w-1/6 before:content-[''] before:bg-green-600 before:inline-block before:h-[3px] before:relative before:align-middle before:w-1/6 before:mr-5 text-xl">
@@ -45,7 +45,7 @@ export default function Contact() {
           </a>
         </div>
         <form action="" className="mt-5 bg-gray-900">
-          <div className="grid grid-cols-2 p-10 gap-2">
+          <div className="grid grid-cols-2 lg:p-10 p-5 gap-2">
             <input
               type="text"
               required=""
@@ -57,12 +57,12 @@ export default function Contact() {
               type="email"
               required=""
               placeholder="E-mail"
-              className={formStyle}
+              className={`${formStyle} col-span-2 lg:col-span-1`}
             />
             <input
               type="text"
               placeholder="Facebook URL ID(Ex:facebook.com/faysalahmed.me)"
-              className={formStyle}
+              className={`${formStyle} col-span-2 lg:col-span-1`}
             />
             <textarea
               name="message"

@@ -4,7 +4,7 @@ function WorkFlow() {
   return (
     <section
       id="workflow-section"
-      className="bg-gray-900 text-white text-center py-[5%] lg:px-72"
+      className="bg-gray-900 text-white text-center py-[5%] min-[1600px]:px-72 md:px-24"
     >
       <div className="lg:grid lg:grid-cols-5 gap-10 max-w-7xl mx-auto">
         <div className="flex flex-col gap-1 col-span-2">
@@ -21,16 +21,16 @@ function WorkFlow() {
           </p>
         </div>
         <div className="flex flex-col justify-between gap-5">
-          <button className="text-md border border-green-500 w-1/2 mx-auto lg:w-full p-3 rounded">
+          <button className="text-md border border-green-500 w-1/2 mx-auto hover:bg-gradient-to-br hover:to-green-600 hover:from-green-400 lg:w-full p-3 rounded">
             Preparing
           </button>
-          <button className="text-lg border border-green-500 w-1/2 mx-auto lg:w-full p-3 rounded">
+          <button className="text-lg border border-green-500 w-1/2 mx-auto hover:bg-gradient-to-br hover:to-green-600 hover:from-green-400 lg:w-full p-3 rounded">
             Design
           </button>
-          <button className="text-md border border-green-500 w-1/2 mx-auto lg:w-full p-3 rounded">
+          <button className="text-md border border-green-500 w-1/2 mx-auto hover:bg-gradient-to-br hover:to-green-600 hover:from-green-400 lg:w-full p-3 rounded">
             Development
           </button>
-          <button className="text-md border border-green-500 w-1/2 mx-auto lg:w-full p-3 rounded">
+          <button className="text-md border border-green-500 w-1/2 mx-auto hover:bg-gradient-to-br hover:to-green-600 hover:from-green-400 lg:w-full p-3 rounded">
             Details
           </button>
         </div>

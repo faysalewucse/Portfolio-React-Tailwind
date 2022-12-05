@@ -12,7 +12,8 @@
 #services-section,
 #navbar,
 #workflow-section,
-#contact-section {
+#contact-section,
+#about-section {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }

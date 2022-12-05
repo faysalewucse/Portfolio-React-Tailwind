@@ -147,9 +147,9 @@ export const Experience = () => {
       <div className="border border-green-500 text-center p-5 rounded mt-5">
         <h1 className="font-bold text-xl mb-5">{topic}</h1>
         <div className="grid grid-cols-3 lg:grid-cols-5 place-items-center items-baseline gap-5">
-          {experiences.map((item) => {
+          {experiences.map((item, index) => {
             return (
-              <div>
+              <div key={index}>
                 <img
                   width={30}
                   src={`images/experience/${item.icon}.png`}
