@@ -1,6 +1,26 @@
 import React from "react";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 export default function Contact() {
+  const form = useRef();
+  const service_id = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const template_id = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const public_key = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    console.log(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+    emailjs.sendForm(service_id, template_id, form.current, public_key).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+  };
+
   const card =
     "bg-gray-900 px-5 py-10 rounded lg:text-xl hover:cursor-pointer lg:hover:-mt-2 transition-all duration-300";
   const formStyle = "bg-gray-800 p-2 rounded";
@@ -44,25 +64,14 @@ export default function Contact() {
             </div>
           </a>
         </div>
-        <form action="" className="mt-5 bg-gray-900">
-          <div className="grid grid-cols-2 lg:p-10 p-5 gap-2">
+        <form ref={form} onSubmit={sendEmail} className="mt-5 bg-gray-900">
+          <div className="grid grid-cols-1 lg:p-10 p-5 gap-2">
             <input
-              type="text"
-              required=""
-              placeholder="Name"
-              className={formStyle}
-            />
-            <input type="text" placeholder="Phone" className={formStyle} />
-            <input
+              name="from_email"
               type="email"
-              required=""
+              required
               placeholder="E-mail"
-              className={`${formStyle} col-span-2 lg:col-span-1`}
-            />
-            <input
-              type="text"
-              placeholder="Facebook URL ID(Ex:facebook.com/faysalahmed.me)"
-              className={`${formStyle} col-span-2 lg:col-span-1`}
+              className={`${formStyle}`}
             />
             <textarea
               name="message"
@@ -70,7 +79,7 @@ export default function Contact() {
               rows={10}
               placeholder="Message"
               defaultValue={""}
-              className={`${formStyle} col-span-2`}
+              className={`${formStyle}`}
             />
           </div>
           <input

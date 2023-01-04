@@ -13,7 +13,7 @@
 #navbar,
 #workflow-section,
 #contact-section,
-#about-section {
+#about-section, #blog-section {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }

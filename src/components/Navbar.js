@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Link as LinkScroll } from "react-scroll";
 
 export default function Navbar() {
   let Links = [
     { name: "Home", route: "/" },
     { name: "About Me", route: "/about" },
     { name: "Projects", route: "/projects" },
-    { name: "BLOG'S", route: "/" },
-    { name: "CONTACT", route: "/" },
+    { name: "BLOG'S", route: "/blogs" },
   ];
   let [open, setOpen] = useState(false);
 
@@ -51,10 +51,25 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
+            {
+              <li className="lg:ml-8 lg:my-0 my-2">
+                <LinkScroll
+                  to={"contact-section"}
+                  smooth={true}
+                  className="text-white hover:text-gray-400 duration-500 font-bold cursor-pointer"
+                >
+                  CONTACT
+                </LinkScroll>
+              </li>
+            }
           </ul>
-          <button className="border border-green-600 text-white hover:bg-gradient-to-br hover:to-green-600 hover:from-green-400 lg:px-10 px-5 py-1 rounded font-bold">
+          <LinkScroll
+            to="contact-section"
+            smooth={true}
+            className="border border-green-600 text-white hover:bg-gradient-to-br hover:to-green-600 hover:from-green-400 lg:px-10 px-5 py-1 rounded font-bold"
+          >
             HIRE ME
-          </button>
+          </LinkScroll>
         </div>
       </div>
     </div>

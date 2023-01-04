@@ -16,8 +16,9 @@ export default function About() {
           <img
             src="images/profile.jpg"
             alt="profile"
-            className="lg:h-96 lg:w-96 h-48 w-48 mx-auto object-cover rounded-full col-span-3"
+            className="lg:h-96 lg:w-96 h-48 w-48 mx-auto object-cover rounded-full col-span-3 "
           />
+
           <hr className="border-2 border-green-600 lg:rotate-90 m-5" />
           <div className="lg:col-span-4 lg:text-2xl">
             <div className="flex gap-5">
