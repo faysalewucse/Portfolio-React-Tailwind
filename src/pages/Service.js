@@ -48,7 +48,7 @@ export const Service = () => {
             return (
               <div
                 key={index}
-                className="group/item relative border border-green-600 px-5 py-10 hover:bg-gray-900 hover:cursor-pointer"
+                className="group/item relative border border-green-600 px-5 py-10 hover:bg-gray-900 hover:cursor-pointer transition duration-300"
               >
                 <i className={`fa-brands fa-${service.icon} text-5xl`}></i>
                 <h4 className="mt-4 text-3xl font-bold my-2">{service.name}</h4>

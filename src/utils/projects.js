@@ -15,9 +15,9 @@ export const projects = [
   },
   {
     name: "Online Food Delivery System",
-    image: "FoodsBd.jpg",
-    live_demo: "https://foodsbd.netlify.app/",
-    source_code: "https://github.com/faysalewucse/Online-Food-Ordering-System",
+    image: "QuizApp.png",
+    live_demo: "https://quiztaker.netlify.app/",
+    source_code: "https://github.com/faysalewucse/Quiz-App-React-RTK-Firebase",
     type: "web",
   },
   {

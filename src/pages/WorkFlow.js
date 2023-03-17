@@ -1,6 +1,8 @@
 import React from "react";
 
 function WorkFlow() {
+  const buttonStyle =
+    "text-md border border-green-500 w-1/2 mx-auto hover:bg-gradient-to-br hover:to-green-600 hover:from-green-400 lg:w-full p-3 rounded transition duration-300";
   return (
     <section
       id="workflow-section"
@@ -21,18 +23,10 @@ function WorkFlow() {
           </p>
         </div>
         <div className="flex flex-col justify-between gap-5">
-          <button className="text-md border border-green-500 w-1/2 mx-auto hover:bg-gradient-to-br hover:to-green-600 hover:from-green-400 lg:w-full p-3 rounded">
-            Preparing
-          </button>
-          <button className="text-lg border border-green-500 w-1/2 mx-auto hover:bg-gradient-to-br hover:to-green-600 hover:from-green-400 lg:w-full p-3 rounded">
-            Design
-          </button>
-          <button className="text-md border border-green-500 w-1/2 mx-auto hover:bg-gradient-to-br hover:to-green-600 hover:from-green-400 lg:w-full p-3 rounded">
-            Development
-          </button>
-          <button className="text-md border border-green-500 w-1/2 mx-auto hover:bg-gradient-to-br hover:to-green-600 hover:from-green-400 lg:w-full p-3 rounded">
-            Details
-          </button>
+          <button className={`${buttonStyle}`}>Preparing</button>
+          <button className={`${buttonStyle}`}>Design</button>
+          <button className={`${buttonStyle}`}>Development</button>
+          <button className={`${buttonStyle}`}>Details</button>
         </div>
         <p className="col-span-2 text-justify lg:border border-green-600 p-5 text-xl">
           For the Project at first I mostly ask questions and talk with my
