@@ -25,30 +25,30 @@ export default function AllProjects({ length, category }) {
                   initial={{ transform: "scale(0)" }}
                   animate={{ transform: "scale(1)" }}
                   exit={{ transform: "scale(1)" }}
-                  className="group/item rounded-lg bg-gray-800 transform hover:bg-gray-700 transition duration-500 lg:hover:scale-105 flex flex-col justify-between"
+                  className="group/item rounded-lg bg-gray-800 transform hover:bg-gray-700 transition duration-500 lg:hover:scale-105 flex flex-col justify-between p-3"
                 >
-                  <h1 className="font-bold tracking-wider my-2">
-                    {project.name}
-                  </h1>
                   <img
-                    className="relative rounded-b object-cover h-60 w-full"
+                    className="relative rounded-b object-cover h-60 rounded-lg"
                     src={`./images/portfolio/${project.image}`}
                     alt={project.name}
                   />
-                  <div className="lg:invisible group-hover/item:visible absolute bottom-1 left-1 transform flex gap-5 mt-10 text-sm w-full">
+                  <h1 className="font-bold tracking-wider left-5 my-2 text-2xl">
+                    {project.name}
+                  </h1>
+                  <div className="flex justify-between items-center">
                     <a
                       href={project.live_demo}
                       target="blank"
-                      className="bg-green-500 px-5 py-2 hover:bg-green-600 rounded-md"
+                      className="border border-green-500 px-4"
                     >
-                      Live Demo
+                      Live
                     </a>
-                    <a
-                      href={project.source_code}
-                      target="blank"
-                      className="bg-gray-600 px-5 py-2 hover:bg-gray-700 rounded-md"
-                    >
-                      Github
+                    <a href={project.source_code} target="blank" className="">
+                      <img
+                        className="w-10"
+                        src="/images/github-mark.png"
+                        alt="github"
+                      />
                     </a>
                   </div>
                 </motion.div>

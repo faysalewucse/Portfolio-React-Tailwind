@@ -10,7 +10,7 @@ export default function HeroSections() {
           <div className="flex flex-col gap-3">
             <p className="lg:text-4xl text-4xl font-bold">
               Hey, I'm <br />{" "}
-              <span className="text-6xl font-bold text-transparent bg-gradient-to-tr from-green-300 to-green-600 bg-clip-text">
+              <span className="text-6xl font-bold text-transparent bg-gradient-to-tr from-green-400 to-green-600 bg-clip-text">
                 Faysal Ahmad
               </span>
             </p>
@@ -40,12 +40,12 @@ export default function HeroSections() {
             <a href="/Faysal Ahmad.pdf" download>
               Download CV
             </a>
-            <i class="fa-solid fa-download ml-4"></i>
+            <i className="fa-solid fa-download ml-4"></i>
           </div>
           <SocialMedias />
         </div>
         <img
-          className="lg:inline-block w-2/5 self-center hidden"
+          className="lg:inline-block w-2/5 self-center hidden z-10"
           src="./images/banner-image.png"
           alt=""
         />

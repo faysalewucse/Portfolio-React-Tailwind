@@ -52,7 +52,7 @@ export default function Portfolio() {
       {length < projects.length ? (
         <p
           onClick={() => setLength(length + 3)}
-          className="border border-green-500 p-2 inline-block cursor-pointer hover:bg-gray-800"
+          className="border border-green-500 py-2 px-6 transition duration-200 inline-block cursor-pointer hover:bg-gray-800"
         >
           Load More Projects...
         </p>

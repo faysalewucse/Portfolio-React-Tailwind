@@ -1,169 +1,169 @@
-import React from "react";
+import ReactCursorPosition from "react-cursor-position";
+import ExperienceCard from "../components/ExperienceCard";
 
 export const Experience = () => {
-  const experience = {
-    coding: [
-      {
-        icon: "c",
-        name: "C",
-      },
-      {
-        icon: "cpp",
-        name: "C++",
-      },
-      {
-        icon: "java",
-        name: "JAVA",
-      },
-      {
-        icon: "python",
-        name: "Python",
-      },
-    ],
-    frontEnd: [
-      {
-        icon: "html",
-        name: "HTML",
-      },
-      {
-        icon: "css",
-        name: "CSS",
-      },
-      {
-        icon: "sass",
-        name: "SASS",
-      },
-      {
-        icon: "bootstrap",
-        name: "Bootstrap",
-      },
-      {
-        icon: "js",
-        name: "JavaScript",
-      },
-      {
-        icon: "typescript",
-        name: "TypeScript",
-      },
-      {
-        icon: "react",
-        name: "REACT",
-      },
-      {
-        icon: "redux",
-        name: "Redux",
-      },
-      {
-        icon: "tailwind",
-        name: "Tailwind",
-      },
-    ],
-    backend: [
-      {
-        icon: "node-js",
-        name: "Node JS",
-      },
-      {
-        icon: "flask",
-        name: "Flask",
-      },
-      {
-        icon: "mysql",
-        name: "MySql",
-      },
-      {
-        icon: "firebase",
-        name: "Firebase",
-      },
-      {
-        icon: "mongodb",
-        name: "MongoDB",
-      },
-    ],
-    mobileApp: [
-      {
-        icon: "java",
-        name: "Java",
-      },
-      {
-        icon: "dart",
-        name: "Dart",
-      },
-      {
-        icon: "flutter",
-        name: "Flutter",
-      },
-    ],
-    editors: [
-      {
-        icon: "vs-code",
-        name: "VS Code",
-      },
-      {
-        icon: "android",
-        name: "Android Studio",
-      },
-    ],
-    design: [
-      {
-        icon: "illustrator",
-        name: "Adobe Illustrator",
-      },
-      {
-        icon: "photoshop",
-        name: "Adobe Photoshop",
-      },
-      {
-        icon: "figma",
-        name: "Figma",
-      },
-      {
-        icon: "premier-pro",
-        name: "Premier Pro",
-      },
-      {
-        icon: "audition",
-        name: "Adobe Audition",
-      },
-    ],
-    others: [
-      {
-        icon: "ms-word",
-        name: "Office",
-      },
-      {
-        icon: "excel",
-        name: "Excel",
-      },
-      {
-        icon: "ppt",
-        name: "Power Point",
-      },
-    ],
-  };
+  const experience = [
+    {
+      name: "Frontend",
+      items: [
+        {
+          icon: "html",
+          name: "HTML",
+        },
+        {
+          icon: "css",
+          name: "CSS",
+        },
+        {
+          icon: "sass",
+          name: "SASS",
+        },
+        {
+          icon: "bootstrap",
+          name: "Bootstrap",
+        },
+        {
+          icon: "js",
+          name: "JavaScript",
+        },
+        {
+          icon: "typescript",
+          name: "TypeScript",
+        },
+        {
+          icon: "react",
+          name: "REACT",
+        },
+        {
+          icon: "redux",
+          name: "Redux",
+        },
+        {
+          icon: "tailwind",
+          name: "Tailwind",
+        },
+      ],
+    },
+    {
+      name: "Backend & Database",
+      items: [
+        {
+          icon: "node-js",
+          name: "Node JS",
+        },
+        {
+          icon: "flask",
+          name: "Flask",
+        },
+        {
+          icon: "mysql",
+          name: "MySql",
+        },
+        {
+          icon: "firebase",
+          name: "Firebase",
+        },
+        {
+          icon: "mongodb",
+          name: "MongoDB",
+        },
+      ],
+    },
+    {
+      name: "Languages",
+      items: [
+        {
+          icon: "c",
+          name: "C",
+        },
+        {
+          icon: "cpp",
+          name: "C++",
+        },
+        {
+          icon: "java",
+          name: "JAVA",
+        },
+        {
+          icon: "python",
+          name: "Python",
+        },
+      ],
+    },
+    {
+      name: "App Development",
+      items: [
+        {
+          icon: "java",
+          name: "Java",
+        },
+        {
+          icon: "dart",
+          name: "Dart",
+        },
+        {
+          icon: "flutter",
+          name: "Flutter",
+        },
+      ],
+    },
+    {
+      name: "Documents & Presentations",
+      items: [
+        {
+          icon: "ms-word",
+          name: "Office",
+        },
+        {
+          icon: "excel",
+          name: "Excel",
+        },
+        {
+          icon: "ppt",
+          name: "Power Point",
+        },
+      ],
+    },
+    {
+      name: "Editors",
+      items: [
+        {
+          icon: "vs-code",
+          name: "VS Code",
+        },
+        {
+          icon: "android",
+          name: "Android Studio",
+        },
+      ],
+    },
+    {
+      name: "Materials",
+      items: [
+        {
+          icon: "illustrator",
+          name: "Adobe Illustrator",
+        },
+        {
+          icon: "photoshop",
+          name: "Adobe Photoshop",
+        },
+        {
+          icon: "figma",
+          name: "Figma",
+        },
+        {
+          icon: "premier-pro",
+          name: "Premier Pro",
+        },
+        {
+          icon: "audition",
+          name: "Adobe Audition",
+        },
+      ],
+    },
+  ];
 
-  const section = (topic, experiences) => {
-    return (
-      <div className="border border-green-500 border-dashed text-center p-5 rounded mt-5">
-        <h1 className="font-bold text-xl mb-5">{topic}</h1>
-        <div className="grid grid-cols-3 lg:grid-cols-5 place-items-center items-baseline gap-5">
-          {experiences.map((item, index) => {
-            return (
-              <div key={index}>
-                <img
-                  width={30}
-                  src={`images/experience/${item.icon}.png`}
-                  alt=""
-                  className="mb-2 mx-auto"
-                />
-                <h1 className="text-sm">{item.name}</h1>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    );
-  };
   return (
     <section
       id="experience-section"
@@ -178,13 +178,11 @@ export const Experience = () => {
         </div>
 
         <div className="grid min-[1300px]:grid-cols-3 min-[600px]:grid-cols-2 grid-cols-1 gap-5">
-          {section("Frontend", experience.frontEnd)}
-          {section("Backend & Database", experience.backend)}
-          {section("Languages", experience.coding)}
-          {section("App Development", experience.mobileApp)}
-          {section("Documents and Presentation", experience.others)}
-          {section("Editors", experience.editors)}
-          {section("Materials", experience.design)}
+          {experience.map((exp, index) => (
+            <ReactCursorPosition key={index}>
+              <ExperienceCard topic={exp.name} experiences={exp.items} />
+            </ReactCursorPosition>
+          ))}
         </div>
       </div>
     </section>

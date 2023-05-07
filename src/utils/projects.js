@@ -1,6 +1,6 @@
 export const projects = [
   {
-    name: "Online Food Delivery System",
+    name: "Foodshub",
     image: "FoodsBd.jpg",
     live_demo: "https://foodsbd.netlify.app/",
     source_code: "https://github.com/faysalewucse/Online-Food-Ordering-System",
