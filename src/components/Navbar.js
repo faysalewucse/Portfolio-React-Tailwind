@@ -66,7 +66,7 @@ export default function Navbar() {
           <LinkScroll
             to="contact-section"
             smooth={true}
-            className="border border-green-600 text-white hover:bg-gradient-to-br hover:to-green-600 hover:from-green-400 lg:px-10 px-5 py-1 rounded font-bold"
+            className="text-white bg-gradient-to-br to-green-600 from-green-400 lg:px-10 px-5 py-1 rounded font-bold cursor-pointer"
           >
             HIRE ME
           </LinkScroll>

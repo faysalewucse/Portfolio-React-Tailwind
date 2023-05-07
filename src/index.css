@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-#banner-section,
-#footer-section {
-  font-family: "Red Rose", cursive;
+* {
+  font-family: "Poppins", sans-serif;
 }
 
-#experience-section,
+/* #experience-section,
 #portfolio-section,
 #services-section,
 #navbar,
@@ -16,4 +15,4 @@
 #about-section, #blog-section {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
-}
+} */

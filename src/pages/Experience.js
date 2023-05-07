@@ -144,7 +144,7 @@ export const Experience = () => {
 
   const section = (topic, experiences) => {
     return (
-      <div className="border border-green-500 text-center p-5 rounded mt-5">
+      <div className="border border-green-500 border-dashed text-center p-5 rounded mt-5">
         <h1 className="font-bold text-xl mb-5">{topic}</h1>
         <div className="grid grid-cols-3 lg:grid-cols-5 place-items-center items-baseline gap-5">
           {experiences.map((item, index) => {

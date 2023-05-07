@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SocialMedias() {
   return (
-    <div className="lg:mt-36 mt-10 text-white flex gap-5 justify-center">
+    <div className=" mt-5 text-white flex gap-2">
       <a
         href="https://github.com/faysalewucse"
         className="transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
