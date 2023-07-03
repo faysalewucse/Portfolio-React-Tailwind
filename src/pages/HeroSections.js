@@ -4,17 +4,17 @@ import SocialMedias from "../utils/SocialMedias";
 
 export default function HeroSections() {
   return (
-    <div className="relative bg-gray-900 lg:px-[5%] px-12 lg:text-left text-center lg:py-[7%] py-12">
-      <div className="lg:flex justify-between items-center gap-40 max-w-7xl mx-auto">
+    <div className="relative bg-gray-900 lg:text-left text-center">
+      <div className="lg:flex justify-between items-center gap-40 max-w-7xl mx-auto md:min-h-[90vh] py-10">
         <div id="banner-section" className="text-white">
           <div className="flex flex-col gap-3">
             <p className="lg:text-4xl text-4xl font-bold">
               Hey, I'm <br />{" "}
-              <span className="text-6xl font-bold text-transparent bg-gradient-to-tr from-green-400 to-green-600 bg-clip-text">
+              <span className="md:text-6xl text-md font-bold text-transparent bg-gradient-to-r to-green-300 from-green-600 bg-clip-text">
                 Faysal Ahmad
               </span>
             </p>
-            <p className="lg:text-6xl text-4xl font-bold italic text-green-500">
+            <p className="lg:text-5xl md:text-4xl text-xl font-bold italic text-green-500">
               <Typewriter
                 words={[
                   "Software Engineer",
@@ -42,13 +42,19 @@ export default function HeroSections() {
             </a>
             <i className="fa-solid fa-download ml-4"></i>
           </div>
-          <SocialMedias />
+          <SocialMedias extraStyle={"justify-center md:justify-start"} />
         </div>
-        <img
-          className="lg:inline-block w-2/5 self-center hidden z-10"
-          src="./images/banner-image.png"
-          alt=""
-        />
+        <div className="md:block hidden w-1/2 relative">
+          <h1 className="bg-yellow-50 text-center text-green-400 absolute py-4 px-8 font-bold text-2xl rounded -left-20 -bottom-5">
+            <span>15+</span>
+            <br /> Projects
+          </h1>
+          <img
+            src="images/profile.jpg"
+            alt="profile"
+            className="w-3/4 rounded-3xl"
+          />
+        </div>
       </div>
       <div className="lg:visible invisible animate-spin border-4 border-green-500 h-10 absolute top-60 right-52 w-10"></div>
       <div className="lg:visible invisible animate-spin border-4 border-green-500 h-10 absolute top-50 left-48 w-10"></div>
@@ -58,7 +64,7 @@ export default function HeroSections() {
       <img
         src="images/wave2.png"
         alt="wave"
-        width={500}
+        width={400}
         className="absolute bottom-0 right-0 animate-pulse hidden lg:inline-block"
       />
     </div>
