@@ -14,7 +14,7 @@ export default function HeroSections() {
                 Faysal Ahmad
               </span>
             </p>
-            <p className="lg:text-5xl md:text-4xl text-xl font-bold italic text-green-500">
+            <p className="lg:text-4xl md:text-4xl text-xl font-bold italic text-green-500">
               <Typewriter
                 words={[
                   "Software Engineer",
@@ -37,7 +37,7 @@ export default function HeroSections() {
             </p>
           </div>
           <div className="py-2 px-4 bg-white text-green-800 rounded font-bold mt-5 inline-block lg:mx-0 hover:bg-gray-100">
-            <a href="/Faysal Ahmad.pdf" download>
+            <a href="/Faysal Ahmed.pdf" download>
               Download CV
             </a>
             <i className="fa-solid fa-download ml-4"></i>
@@ -45,8 +45,8 @@ export default function HeroSections() {
           <SocialMedias extraStyle={"justify-center md:justify-start"} />
         </div>
         <div className="md:block hidden w-1/2 relative">
-          <h1 className="bg-yellow-50 text-center text-green-400 absolute py-4 px-8 font-bold text-2xl rounded -left-20 -bottom-5">
-            <span>15+</span>
+          <h1 className="border-4 border-green-700 border-dashed bg-yellow-50 bg-opacity-80 text-center absolute py-4 px-8 font-bold text-2xl rounded -left-20 -bottom-5">
+            <span>10+</span>
             <br /> Projects
           </h1>
           <img
