@@ -32,23 +32,33 @@ export default function AllProjects({ length, category }) {
                     src={`./images/portfolio/${project.image}`}
                     alt={project.name}
                   />
-                  <h1 className="font-bold tracking-wider left-5 my-2 text-2xl">
+                  <h1 className="font-bold text-left tracking-wider text-2xl mt-4">
                     {project.name}
                   </h1>
-                  <div className="flex justify-between items-center">
+                  <p className="text-left my-5">
+                    {project.features?.slice(0, 3).map((feature, index) => (
+                      <p>
+                        {index + 1}. {feature}
+                      </p>
+                    ))}
+                    {project.features && project.features.length > 3 && (
+                      <small className="underline">See More</small>
+                    )}
+                  </p>
+                  <div className="flex gap-5 justify-between items-center">
                     <a
                       href={project.live_demo}
                       target="blank"
-                      className="border border-green-500 px-4"
+                      className="text-black font-bold bg-gradient-to-tr from-green-400 to-yellow-300 py-2 w-full rounded-lg"
                     >
                       Live
                     </a>
-                    <a href={project.source_code} target="blank" className="">
-                      <img
-                        className="w-10"
-                        src="/images/github-mark.png"
-                        alt="github"
-                      />
+                    <a
+                      href={project.source_code}
+                      target="blank"
+                      className="bg-gray-700 text-white py-2 rounded-lg w-full"
+                    >
+                      GitHub
                     </a>
                   </div>
                 </motion.div>

@@ -10,7 +10,7 @@ export default function HeroSections() {
           <div className="flex flex-col gap-3">
             <p className="lg:text-4xl text-4xl font-bold">
               Hey, I'm <br />{" "}
-              <span className="md:text-6xl text-md font-bold text-transparent bg-gradient-to-r to-green-300 from-green-600 bg-clip-text">
+              <span className="md:text-6xl text-md font-bold text-transparent bg-gradient-to-r to-yellow-300 from-green-600 bg-clip-text">
                 Faysal Ahmad
               </span>
             </p>
